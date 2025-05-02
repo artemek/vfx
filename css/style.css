@@ -1,0 +1,347 @@
+body {
+    font-family: 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: var(--dark-bg);
+    color: var(--light-text);
+    line-height: 1.7;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+a {
+    position: relative;
+    color: var(--highlight);
+    text-decoration: none;
+    transition: color 0.3s;
+    user-select: text;
+    -webkit-user-select: text;
+    -ms-user-select: text;
+}
+
+a::after,
+a::before {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: var(--highlight);
+    transition: width 0.3s ease;
+    left: 0;
+}
+
+a::after {
+    bottom: 0;
+}
+
+a::before {
+    top: 0;
+}
+
+a:hover::after,
+a:hover::before {
+    width: 100%;
+}
+
+.container > *:first-child {
+    margin-top: 0;
+}
+
+:root {
+    --dark-bg: #121212;
+    --gold: #ff3a3a;
+    --highlight: #ff6666;
+    --light-text: #F0F0F0;
+    --card-bg: #1E1E1E;
+    --section-gap: 80px;
+}
+
+.navbar {
+    background-color: var(--card-bg);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.nav-logo {
+    color: var(--gold);
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-link {
+    color: var(--light-text);
+    text-decoration: none;
+    transition: color 0.3s;
+    font-weight: 500;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--highlight);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    flex: 1;
+}
+
+header {
+    text-align: center;
+    margin: 20px 0 60px 0;
+    padding-top: 0;
+}
+
+h1 {
+    color: var(--gold);
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    margin-bottom: 20px;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+}
+
+h2 {
+    color: var(--gold);
+    font-size: 2rem;
+    margin-bottom: 30px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100px;
+    height: 3px;
+    background: var(--gold);
+}
+
+.project {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 60px;
+    align-items: center;
+}
+
+.project-media {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+    position: relative;
+    height: 100%;
+    min-height: 300px;
+}
+
+.project-media img, 
+.project-media video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.project-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.carousel-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.carousel-container {
+    display: flex;
+    height: 100%;
+    transition: transform 0.5s ease;
+}
+
+.carousel-container .slide {
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-container .slide img,
+.carousel-container .slide video {
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.carousel-nav {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 0;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+
+.carousel-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.9);
+    justify-content: center;
+    align-items: center;
+    cursor: zoom-out;
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 90%;
+    animation: zoomIn 0.3s ease;
+    border-radius: 12px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+    object-fit: contain;
+    cursor: zoom-out;
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.6); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+    margin-bottom: 40px;
+}
+
+.video-wrapper iframe {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+footer {
+    text-align: center;
+    padding: 30px 0;
+    background-color: var(--card-bg);
+    margin-top: auto;
+}
+
+.youtube-responsive {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    margin: auto;
+    margin-bottom: 40px;
+}
+
+.youtube-responsive iframe {
+    width: 100%;
+    height: 100%;
+    border: auto;
+    display: block;
+}
+
+@keyframes pulseGlow {
+    0%, 100% {
+        box-shadow: 0 0 0px var(--highlight);
+        transform: scale(1);
+    }
+    50% {
+        box-shadow: 0 0 12px var(--highlight);
+        transform: scale(1.2);
+    }
+}
+
+.carousel-dot.active {
+    background: var(--gold);
+    animation: pulseGlow 2.5s infinite;
+}
+
+#modal .nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: rgb(255, 70, 70);
+    font-size: 5rem;
+    cursor: pointer;
+    padding: 50px;
+    z-index: 10;
+    user-select: none;
+}
+
+#modal .nav-button.left {
+    left: 10px;
+}
+
+#modal .nav-button.right {
+    right: 10px;
+}
+
+@media (max-width: 768px) {
+    .project {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .project-media {
+        min-height: 250px;
+        order: -1;
+    }
+    
+    .nav-menu {
+        gap: 15px;
+    }
+}

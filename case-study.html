@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Case Study</title>
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">Showreel</a>
+                <a href="theHole.html" class="nav-link">The Hole</a>
+                <a href="case-study.html" class="nav-link active">Online-VFX School Case</a>
+                <a href="contacts.html" class="nav-link">Contacts</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header>
+            <h1>VFX Artist Journey</h1>
+            <p class="subtitle">First 6 months of intensive Houdini training, procedural modeling and VFX exploration at <a href="https://online-vfx.ru/">Online-VFX</a> school</p>
+        </header>
+        
+        <section id="vfx-projects">
+            <h2>Procedural Workflow, VEX & USD Pipeline</h2>
+            
+            <div class="project">
+                <div class="project-media">
+                    <div class="carousel-wrapper">
+                        <div class="carousel-container" id="proceduralCarousel">
+                            <div class="slide"><img src="content/vfx/hw0201.png" alt="VOP - HW1"></div>
+                            <div class="slide"><video muted autoplay loop playsinline>                     
+                                <source src="content/vfx/HW0202.mp4" type="video/mp4">
+                            </video></div>
+                            <div class="slide"><video muted autoplay loop playsinline>                     
+                                <source src="content/vfx/HW0203.mp4" type="video/mp4">
+                            </video></div>
+                            <div class="slide"><img src="content/vfx/HW0205.png" alt="Procedural tokamaks"></div>
+                            <div class="slide"><img src="content/vfx/hw0206_tree.png" alt="Procedural tree"></div>
+                            <div class="slide"><img src="content/vfx/hw0206_goldenSpiral.png" alt="Procedural spiral"></div>
+                            <div class="slide"><video muted autoplay loop playsinline>                     
+                                <source src="content/vexAndPython/vex04.mp4" type="video/mp4">
+                            </video></div>
+                            <div class="slide"><video muted autoplay loop playsinline>                     
+                                <source src="content/vexAndPython/vex01_1t.mp4" type="video/mp4">
+                            </video></div>
+                            <div class="slide"><img src="content/vexAndPython/vex03.png" alt="VEX example"></div>
+                        </div>
+                        <div class="carousel-nav" id="proceduralCarouselNav"></div>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3>Procedural Modeling</h3>
+                    <p>Working with geometry attributes to control procedural behaviors in Houdini. Working with attributes, geometry construction and sorting algorithms via VEX-code.</p>
+                </div>
+            </div>
+
+            <div class="project">
+                <div class="project-content">
+                    <h3>USD Asset Pipeline</h3>
+                    <p>Prepared USD assets from 3D model libraries. Explored PBR shaders, lighting setups and Karma rendering</p>
+                </div>
+                <div class="project-media">
+                    <div class="carousel-wrapper">
+                        <div class="carousel-container" id="usdCarousel">
+                            <div class="slide"><img src="content/vfx/usd lib/VFX_HW_02_Camera.png" alt="USD Asset Pipeline - Camera"></div>
+                            <div class="slide"><img src="content/vfx/usd lib/VFX_HW_02_Plane.png" alt="USD Asset Pipeline - Plane"></div>
+                            <div class="slide"><img src="content/vfx/usd lib/VFX_HW_02_Radio.png" alt="USD Asset Pipeline - Radio"></div>
+                            <div class="slide"><img src="content/vfx/usd lib/VFX_HW_02_WoodenLantern.png" alt="USD Asset Pipeline - Lantern"></div>
+                            <div class="slide"><img src="content/vfx/render_assets.png" alt="Shading and Rendering"></div>
+                        </div>
+                        <div class="carousel-nav" id="usdCarouselNav"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="vex-python">
+            <h2>Python Programming</h2>        
+            <div class="project">
+                <div class="project-media">
+                    <div class="carousel-wrapper">
+                        <div class="carousel-container" id="PythonCarousel">
+                            <div class="slide"><img src="content/vexAndPython/MS2USD_libs.png" alt="Python - result"></div>
+                        </div>
+                        <div class="carousel-nav" id="pythonCarouselNav"></div>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <p>Developed a <a href="https://github.com/artemek/MS2USD">Python shelf tool</a> to automate Megascans models integration into Houdini USD database</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="modeling">
+            <h2>Modeling & Concept Art</h2>
+            <div class="project">
+                <div class="project-content">
+                    <h3>Concept Art & Silhouette Studies</h3>
+                    <p>Explored shape language and quick ideation techniques</p>
+                </div>
+                <div class="project-media">
+                    <img src="content/modeling/modeling_HW0902.png" alt="HW_02">
+                </div>    
+            </div>
+
+            <div class="project">
+                <div class="project-media">
+                    <img src="content/modeling/modeling_HW1001.png" alt="HW_03">
+                </div>
+                <div class="project-content">
+                    <h3>KitBash Modeling</h3>
+                    <p>Built a 3D model using modular assets with overpainting</p>
+                    <p class="credits">Original concept by <a href="https://www.artstation.com/artwork/qzzK2">George Hull</a></p>
+                </div>
+            </div>
+
+            <div class="project">
+                <div class="project-content">
+                    <h3>3D Scene Blocking</h3>
+                    <p>Blocked out a scene in Houdini, then used <a href="https://github.com/stassius/StableHoudini">Stable Houdini</a> assets to generate stylized iterations via Stable Diffusion</p>
+                    <p class="credits">Original concept by <a href="https://www.artstation.com/artwork/X1lVmY">Willem van Lelyveld</a></p>
+                </div>
+                <div class="project-media">
+                    <video controls poster="content/modeling/Modeling_HW03_thumb.jpg">
+                        <source src="content/modeling/Modeling_HW03_lr.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </section>
+        
+        <footer>
+            <p>More projects coming soon</p>
+        </footer>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>
