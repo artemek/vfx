@@ -168,5 +168,6 @@ document.addEventListener('DOMContentLoaded', () => {
     initCarousel('modelsHCarousel', 'modelsHCarouselNav');
     initCarousel('shadingHCarousel', 'shadingHCarouselNav');
     initCarousel('simHCarousel', 'simHCarouselNav');
+    initCarousel('rigCarousel', 'rigCarouselNav');
     enableImageZoom();
 });
